@@ -3,9 +3,6 @@ import std/[strutils, math, sets, sequtils]
 const TargetFile = "day2/input.txt"
 
 proc get_multiplier(chunk_len, repeats: int): int =
-  var m_str = ""
-  # The pattern is '1' followed by (chunk_len-1) '0's
-  let part = "1" & repeat("0", chunk_len - 1) 
   result = 0
   for i in 0 ..< repeats:
     result += 10 ^ (i * chunk_len)
