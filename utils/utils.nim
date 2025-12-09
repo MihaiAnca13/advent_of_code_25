@@ -1,7 +1,10 @@
 import std/sequtils
 
 
-type Matrix* = seq[seq[int]]
+type 
+    Matrix* = seq[seq[int]]
+    Pair* = array[2, int]
+    Pairs* = seq[Pair]
 
 
 proc `+`*(a, b: Matrix): Matrix =
